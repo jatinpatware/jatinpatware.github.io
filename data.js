@@ -123,7 +123,7 @@ const resumeData = {
     { name: "Microsoft Certified: Azure Data Engineer Associate", icon: "🔷",  link: "https://www.credly.com/badges/4736cbac-f9d1-4401-a170-0e1fd841889d/public_url" },
     { name: "Microsoft Certified: Azure Developer Associate",     icon: "🔷",  link: "https://www.credly.com/badges/02f8ecf3-1692-4650-9512-54ddd4216f10/public_url" },
     { name: "MCSE: Data Management and Analytics (2019)",         icon: "🔷",  link: "https://www.credly.com/badges/4a35bfc4-5c82-4b7d-b51c-8f7cb29204f0/public_url" },
-    { name: "Coursera: Data Structures & Algorithms Specialisation", icon: "📘", link: null },
+    { name: "Coursera: Data Structures & Algorithms Specialisation", icon: "📘", link: "https://github.com/jatinpatware/Certifiacates" },
     // Component exams — rendered as compact tags
     { name: "DP-200: Implementing an Azure Data Solution",        icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/b599c06b-6087-4c94-98b1-30d37b24eeb9/public_url" },
     { name: "DP-201: Designing an Azure Data Solution",           icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/9e072037-6fde-4af1-91b2-64d56ae5e08a/public_url" },
