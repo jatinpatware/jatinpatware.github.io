@@ -103,15 +103,29 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== HERO ===== */
 #hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  padding: 80px 2rem 4rem;
+  padding: 110px 2rem 3rem;
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
+}
+
+.hero-tagline1 {
+  font-size: 1.05rem;
+  color: var(--white);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.hero-tagline2 {
+  font-size: 1rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.5rem;
 }
 
 .hero-greeting {
@@ -135,13 +149,6 @@ a { text-decoration: none; color: inherit; }
   font-weight: 400;
   color: var(--teal);
   margin-bottom: 1rem;
-}
-
-.hero-tagline {
-  font-size: 1.1rem;
-  color: var(--muted);
-  font-style: italic;
-  margin-bottom: 0.5rem;
 }
 
 .hero-sub {
@@ -557,6 +564,96 @@ footer {
   font-size: 0.82rem;
   border-top: 1px solid var(--border);
 }
+
+/* ===== PROJECTS ===== */
+.projects-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--teal);
+  transform: translateY(-3px);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.project-status {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.project-link {
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.project-desc {
+  color: #ccd6e0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-stack span {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--teal);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* ===== CERT LINK ===== */
+.cert-name {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cert-name:hover { color: var(--teal); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {

@@ -10,7 +10,6 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
       <span class="nav-logo">JP</span>
@@ -18,34 +17,23 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-content">
       <p class="hero-greeting">Hi, I'm</p>
-      <h1 class="hero-name">Jatin Patware</h1>
-      <h2 class="hero-title">Senior Data Engineer</h2>
-      <p class="hero-tagline">Designing data systems that scale.</p>
-      <p class="hero-sub">8+ Years · Petabyte Scale · Real-Time Pipelines · AI/LLM Integration</p>
-      <div class="hero-badges">
-        <span class="badge">Apache Spark</span>
-        <span class="badge">Kafka Streams</span>
-        <span class="badge">AWS</span>
-        <span class="badge">Apache Iceberg</span>
-        <span class="badge">Data Mesh</span>
-        <span class="badge">LLM Integration</span>
-      </div>
-      <div class="hero-links">
-        <a href="https://linkedin.com/in/jatin-patware-b9411183" target="_blank" class="btn-primary">LinkedIn</a>
-        <a href="https://github.com/jatinpatware" target="_blank" class="btn-secondary">GitHub</a>
-        <a href="resume/Jatin_Patware_Senior_Data_Engineer.pdf" target="_blank" class="btn-secondary">Download Resume</a>
-        <a href="mailto:jatincse19@gmail.com" class="btn-secondary">Email</a>
-      </div>
+      <h1 class="hero-name" id="hero-name"></h1>
+      <h2 class="hero-title" id="hero-title"></h2>
+      <p class="hero-tagline1" id="hero-tagline1"></p>
+      <p class="hero-tagline2" id="hero-tagline2"></p>
+      <p class="hero-sub" id="hero-sub"></p>
+      <div class="hero-badges" id="hero-badges"></div>
+      <div class="hero-links" id="hero-links"></div>
     </div>
     <div class="hero-scroll">
       <span>scroll down</span>
@@ -53,274 +41,70 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About</h2>
       <div class="about-grid">
-        <div class="about-text">
-          <p>I design data systems that hold up at scale — 8+ years of doing it across petabyte-scale pipelines, real-time Kafka streams, and AI/LLM integration into data workflows.</p>
-          <p>At <strong>Fanatics</strong>, one of the world's largest licensed sports merchandise platforms, I own the Kafka Streams pipeline and canonical data layer for real-time order processing. Before that, <strong>Fractal Analytics</strong> and <strong>MAQ Software</strong>.</p>
-          <p>I'm equally comfortable whiteboarding a data mesh architecture, reviewing an engineer's design, or digging into a pipeline bottleneck.</p>
-        </div>
+        <div class="about-text" id="about-text"></div>
         <div class="about-focus">
           <h3>What I focus on</h3>
-          <ul class="focus-list">
-            <li>Clean data architecture from ambiguous requirements</li>
-            <li>Pipeline performance — Spark UI and DAG debugging</li>
-            <li>Data contracts and quality frameworks that prevent incidents</li>
-            <li>LLM tooling integration to reduce engineering overhead</li>
-            <li>Mentoring engineers and cross-functional technical alignment</li>
-          </ul>
+          <ul class="focus-list" id="focus-list"></ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-
-        <!-- Fanatics Sr DE -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="card-header">
-              <div>
-                <h3 class="card-title">Senior Data Engineer</h3>
-                <p class="card-company">Fanatics — Global Licensed Sports Merchandise Platform</p>
-              </div>
-              <span class="card-date">Mar 2025 – Present</span>
-            </div>
-            <div class="card-stack">Scala · Spark · Kafka Streams · AWS · Iceberg · Airflow · Trino · Docker</div>
-            <ul class="card-bullets">
-              <li>Own design and reliability of real-time order event processing on Kafka Streams — canonical data models and transformation contracts supporting <strong>30–40K messages/min at peak</strong></li>
-              <li>Maintain and evolve the canonical Iceberg layer at <strong>petabyte scale</strong>, consumed by downstream BI and analytics systems</li>
-              <li>Integrated LLM-powered capabilities using AWS Bedrock Agents, Glean, and Claude — automated insight surfacing and reduced engineering overhead</li>
-              <li>Mentored junior and mid-level engineers; go-to design reviewer across cross-functional squads</li>
-              <li>Drove data mesh adoption — data contracts, lineage, and cataloguing at platform scale</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Fanatics DE3 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="card-header">
-              <div>
-                <h3 class="card-title">Data Engineer III</h3>
-                <p class="card-company">Fanatics</p>
-              </div>
-              <span class="card-date">Mar 2022 – Feb 2025</span>
-            </div>
-            <div class="card-stack">Scala · Spark · AWS · Stonebranch · Trino · Python · SQL</div>
-            <ul class="card-bullets">
-              <li>Designed and delivered Spark batch pipelines on AWS processing petabyte-scale commerce data — significant runtime and compute cost reductions</li>
-              <li>Built backend data pipelines powering executive dashboards — enabling <strong>200+ ecommerce metrics</strong> consumed by senior leadership</li>
-              <li>Built ETL pipelines in Scala/Spark powering BI reporting layers</li>
-              <li>Designed a data quality framework adopted across critical pipelines — validation rules, SLA contracts, and alerting</li>
-              <li>Owned orchestration across <strong>100+ workflows</strong> on Stonebranch</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Fractal -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="card-header">
-              <div>
-                <h3 class="card-title">Data Engineer</h3>
-                <p class="card-company">Fractal Analytics</p>
-              </div>
-              <span class="card-date">Nov 2020 – Jan 2022</span>
-            </div>
-            <div class="card-stack">Snowflake · Azure Data Factory · Python · SQL</div>
-            <ul class="card-bullets">
-              <li>Built ETL pipelines into Snowflake for Marketing Mix Modelling and Supply Chain analytics clients</li>
-              <li>Created transformation and harmonisation layers across client datasets</li>
-              <li>Worked across multiple client engagements with focus on pipeline reliability</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- MAQ -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <div class="card-header">
-              <div>
-                <h3 class="card-title">BI & Backend Engineer</h3>
-                <p class="card-company">MAQ Software</p>
-              </div>
-              <span class="card-date">Jul 2018 – Oct 2020</span>
-            </div>
-            <div class="card-stack">SSAS · SSIS · SQL · Power BI · Azure Data Factory · Azure Functions · C#</div>
-            <ul class="card-bullets">
-              <li>Built SSAS tabular models, SSIS ETL pipelines, and stored procedures for enterprise reporting</li>
-              <li>Developed Power BI dashboards and Azure Functions for API-based data ingestion</li>
-              <li>Built CI/CD pipelines for automated deployment of BI solutions</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
+      <div class="timeline" id="timeline"></div>
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Core</h3>
-          <div class="skill-tags">
-            <span>System Design</span><span>Data Architecture</span>
-            <span>Apache Spark</span><span>Scala</span>
-            <span>PySpark</span><span>SQL</span>
-            <span>Python</span><span>Distributed Systems</span>
-            <span>ETL / Pipeline Design</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>Cloud & Infra</h3>
-          <div class="skill-tags">
-            <span>AWS S3</span><span>AWS EMR</span>
-            <span>AWS Glue</span><span>AWS Lambda</span>
-            <span>AWS Bedrock</span><span>Azure ADF</span>
-            <span>Snowflake</span><span>Docker</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>Streaming & Query</h3>
-          <div class="skill-tags">
-            <span>Apache Kafka</span><span>Kafka Streams</span>
-            <span>Event-driven Architecture</span>
-            <span>Spark SQL</span><span>Trino</span><span>Hive</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>Data Platform</h3>
-          <div class="skill-tags">
-            <span>Data Mesh</span><span>Data Contracts</span>
-            <span>Data Lineage</span><span>Data Quality</span>
-            <span>Apache Iceberg</span><span>Data Cataloguing</span>
-            <span>Apache Airflow</span><span>Stonebranch</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>AI / LLM</h3>
-          <div class="skill-tags">
-            <span>AWS Bedrock</span><span>Bedrock Agents</span>
-            <span>Claude (Anthropic)</span><span>Glean</span>
-            <span>LLM Pipeline Integration</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h3>BI & Other</h3>
-          <div class="skill-tags">
-            <span>Power BI</span><span>SSAS Tabular</span>
-            <span>SSIS</span><span>C#</span>
-            <span>CI/CD</span><span>Git</span><span>Agile</span>
-          </div>
-        </div>
-      </div>
+      <div class="skills-grid" id="skills-grid"></div>
     </div>
   </section>
 
-  <!-- EDUCATION & CERTS -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="projects-sub">Open-source projects and tools — published as they become available.</p>
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
   <section id="education">
     <div class="container">
       <h2 class="section-title">Education & Certifications</h2>
       <div class="edu-cert-grid">
         <div class="edu-block">
           <h3>Education</h3>
-          <div class="edu-item">
-            <div class="edu-icon">🎓</div>
-            <div>
-              <h4>M.Tech — Computer Science & Engineering</h4>
-              <p class="edu-school">National Institute of Technology Allahabad (MNNIT)</p>
-              <p class="edu-meta">2016 – 2018 · CGPA 8.55 / 10</p>
-              <p class="edu-note">AIR-1518 in GATE 2016 · Co-ordinator, Data Analytics & ML Workshop</p>
-            </div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-icon">🎓</div>
-            <div>
-              <h4>B.E. — Computer Science & Engineering</h4>
-              <p class="edu-school">Madhav Institute of Technology & Science, Gwalior (MITS)</p>
-              <p class="edu-meta">2012 – 2016 · CGPA 7.8 / 10</p>
-            </div>
-          </div>
+          <div id="edu-list"></div>
         </div>
         <div class="cert-block">
           <h3>Certifications</h3>
-          <div class="cert-list">
-            <div class="cert-item featured">
-              <span class="cert-icon">☁️</span>
-              <span>AWS Certified Data Engineer – Associate</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon">🔷</span>
-              <span>Microsoft Azure DP-200 / DP-201</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon">🔷</span>
-              <span>Microsoft Azure AZ-203</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon">🔷</span>
-              <span>Microsoft Power BI 70-778</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon">📘</span>
-              <span>Coursera Data Structures & Algorithms Specialisation</span>
-            </div>
-          </div>
+          <div class="cert-list" id="cert-list"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <p class="contact-sub">Open to connecting with engineers and teams working on hard data problems.</p>
-      <div class="contact-links">
-        <a href="mailto:jatincse19@gmail.com" class="contact-card">
-          <span class="contact-icon">✉️</span>
-          <span>jatincse19@gmail.com</span>
-        </a>
-        <a href="https://linkedin.com/in/jatin-patware-b9411183" target="_blank" class="contact-card">
-          <span class="contact-icon">💼</span>
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/jatinpatware" target="_blank" class="contact-card">
-          <span class="contact-icon">🐙</span>
-          <span>GitHub</span>
-        </a>
-        <a href="https://leetcode.com/u/j1p1" target="_blank" class="contact-card">
-          <span class="contact-icon">💡</span>
-          <span>LeetCode</span>
-        </a>
-        <a href="https://hackerrank.com/profile/jatin_mits" target="_blank" class="contact-card">
-          <span class="contact-icon">⭐</span>
-          <span>HackerRank</span>
-        </a>
-      </div>
+      <div class="contact-links" id="contact-links"></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>Jatin Patware · Senior Data Engineer · Hyderabad, India</p>
+    <p id="footer-text"></p>
   </footer>
 
+  <script src="data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

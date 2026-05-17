@@ -31,101 +31,81 @@
 </head>
 <body>
 
-<h1>Jatin Patware</h1>
-<div class="subtitle">Senior Data Engineer</div>
-<div class="contact">
-  Hyderabad, India &nbsp;|&nbsp;
-  <a href="mailto:jatincse19@gmail.com">jatincse19@gmail.com</a> &nbsp;|&nbsp;
-  <a href="https://linkedin.com/in/jatin-patware-b9411183">LinkedIn</a> &nbsp;|&nbsp;
-  <a href="https://github.com/jatinpatware">GitHub</a> &nbsp;|&nbsp;
-  <a href="https://jatinpatware.github.io">Portfolio</a>
-</div>
+<script src="../data.js"></script>
+<script>
+const d = resumeData;
 
-<h2>Summary</h2><hr/>
-<p>Data Engineer with 8+ years of experience known for strong system design instincts and structured logical thinking — translating ambiguous business and infrastructure problems into clean, scalable data architectures. Experienced across the full data platform lifecycle: from requirements and design through to delivery, governance, and optimisation. Deep hands-on exposure to Apache Spark, AWS, and distributed pipeline design at petabyte scale. Currently at Fanatics, one of the world's largest licensed sports merchandise platforms. Equally comfortable whiteboarding a data mesh architecture, reviewing an engineer's design, or digging into a pipeline bottleneck. Experienced in mentoring engineers, driving cross-functional alignment, and integrating AI/LLM tooling into data workflows.</p>
+// Header
+document.write(`
+  <h1>${d.name}</h1>
+  <div class="subtitle">${d.title}</div>
+  <div class="contact">
+    ${d.location} &nbsp;|&nbsp;
+    <a href="mailto:${d.email}">${d.email}</a> &nbsp;|&nbsp;
+    <a href="${d.linkedin}">LinkedIn</a> &nbsp;|&nbsp;
+    <a href="${d.github}">GitHub</a> &nbsp;|&nbsp;
+    <a href="${d.portfolio}">Portfolio</a>
+  </div>
+`);
 
-<h2>Technical Skills</h2><hr/>
-<table>
-  <tr><td>Core</td><td>System Design · Data Architecture · Apache Spark (Scala, PySpark) · SQL · Python · Distributed Systems · ETL / Pipeline Design</td></tr>
-  <tr><td>Cloud &amp; Infra</td><td>AWS (S3, EMR, Glue, Lambda, Redshift, Bedrock) · Azure (ADF, Functions, HD Insights) · Snowflake · Docker</td></tr>
-  <tr><td>Streaming</td><td>Apache Kafka · Kafka Streams · Event-driven Architecture</td></tr>
-  <tr><td>Query Engines</td><td>Spark SQL · Trino · Hive</td></tr>
-  <tr><td>Orchestration</td><td>Apache Airflow · Stonebranch</td></tr>
-  <tr><td>Data Platform</td><td>Data Mesh · Data Contracts · Data Lineage · Data Quality Frameworks · Apache Iceberg · Data Cataloguing</td></tr>
-  <tr><td>AI / LLM</td><td>AWS Bedrock · Bedrock Agents · LLaMA3 · Glean · Claude (Anthropic) · LLM Pipeline Integration</td></tr>
-  <tr><td>BI / Legacy</td><td>Power BI · SSAS (Tabular) · SSMS · SSIS · C#</td></tr>
-  <tr><td>Other</td><td>CI/CD Pipelines · Git · Agile / Scrum</td></tr>
-</table>
+// Summary
+document.write(`<h2>Summary</h2><hr/><p>${d.summary.replace(/\n\s+/g, ' ').trim()}</p>`);
 
-<h2>Work Experience</h2><hr/>
+// Technical Skills
+document.write(`<h2>Technical Skills</h2><hr/><table>`);
+d.skills.forEach(sg => {
+  document.write(`<tr><td>${sg.category}</td><td>${sg.items.join(' · ')}</td></tr>`);
+});
+document.write(`</table>`);
 
-<div class="role-header"><h3><span class="company">Fanatics</span> — Global Licensed Sports Merchandise Platform</h3></div>
+// Experience
+document.write(`<h2>Work Experience</h2><hr/>`);
+d.experience.forEach((exp, ei) => {
+  // Company header only once
+  const companyLabel = exp.companyDesc ? `${exp.company} — ${exp.companyDesc}` : exp.company;
+  document.write(`<div class="role-header"><h3><span class="company">${companyLabel}</span></h3></div>`);
 
-<div class="role-header"><h3>Senior Data Engineer</h3><span class="date">Mar 2025 – Present</span></div>
-<div class="stack">Stack: Apache Spark (Scala), AWS (S3, EMR, Glue, Lambda, Bedrock), Kafka Streams, Airflow, Stonebranch, Trino, Python, SQL, Docker</div>
-<ul>
-  <li>Own design and reliability of real-time order event processing on Kafka Streams — canonical data models and transformation contracts supporting <strong>30–40K messages/min at peak</strong> across multiple downstream consumers</li>
-  <li>Maintain and evolve the canonical Iceberg layer at <strong>petabyte scale</strong>, consumed by downstream BI and analytics systems</li>
-  <li>Built an <strong>agentic solution for automated order data lineage tracing</strong> across a complex multi-layer pipeline — enabling engineers to debug field discrepancies end-to-end across Kafka Streams, Iceberg, and downstream BI layers</li>
-  <li>Integrated LLM-powered capabilities using AWS Bedrock Agents, Glean, and Claude — automated insight surfacing and reduced engineering overhead</li>
-  <li>Mentored junior and mid-level engineers; go-to design reviewer across cross-functional squads</li>
-  <li>Drove data mesh adoption — data contracts, lineage, and cataloguing at platform scale</li>
-</ul>
+  exp.roles.forEach(role => {
+    document.write(`
+      <div class="role-header"><h3>${role.title}</h3><span class="date">${role.period}</span></div>
+      <div class="stack">Stack: ${role.stack}</div>
+      <ul>
+        ${role.bullets.map(b => `<li>${b}</li>`).join('')}
+      </ul>
+    `);
+  });
+});
 
-<div class="role-header"><h3>Data Engineer III</h3><span class="date">Mar 2022 – Feb 2025</span></div>
-<div class="stack">Stack: Apache Spark (Scala), AWS (S3, EMR, Glue, Lambda), Kafka Streams, Stonebranch, Trino, Python, SQL</div>
-<ul>
-  <li>Designed and delivered Spark batch pipelines on AWS processing petabyte-scale commerce data — significant runtime and compute cost reductions via Spark UI and DAG tuning</li>
-  <li>Built backend data pipelines powering executive dashboards — enabling <strong>200+ ecommerce metrics</strong> consumed by senior leadership</li>
-  <li>Designed and built an <strong>in-house data quality framework in Scala/Spark with YAML-based rule configuration</strong> — adopted across critical pipelines for validation, SLA enforcement, and alerting</li>
-  <li>Built an <strong>LLM-powered executive insight engine</strong> (internal hackathon) — LLaMA3 on EC2, invoked via AWS Lambda, generating natural language insights from enriched S3 commerce data</li>
-  <li>Built ETL pipelines in Scala/Spark powering BI reporting layers</li>
-  <li>Owned orchestration across <strong>100+ workflows</strong> on Stonebranch</li>
-</ul>
+// Certifications
+document.write(`<h2>Certifications</h2><hr/><ul class="cert-list">`);
+d.certifications.forEach(c => {
+  if (c.featured) {
+    document.write(`<li><strong>${c.name}</strong></li>`);
+  } else {
+    document.write(`<li>${c.name}</li>`);
+  }
+});
+document.write(`</ul>`);
 
-<div class="role-header"><h3><span class="company">Fractal Analytics</span></h3><span class="date">Nov 2020 – Jan 2022</span></div>
-<div style="font-size:10.5pt; font-weight:600;">Data Engineer</div>
-<div class="stack">Stack: Snowflake · Azure Data Factory · Python · SQL</div>
-<ul>
-  <li>Built ETL pipelines into Snowflake for Marketing Mix Modelling and Supply Chain analytics clients</li>
-  <li>Created transformation and harmonisation layers across client datasets</li>
-  <li>Worked across multiple client engagements with focus on pipeline reliability and data consistency</li>
-</ul>
+// Education
+document.write(`<h2>Education</h2><hr/>`);
+d.education.forEach(e => {
+  document.write(`
+    <div class="role-header"><strong>${e.degree}</strong><span class="date">${e.period}</span></div>
+    <div>${e.school} · CGPA ${e.cgpa}</div>
+  `);
+  if (e.notes && e.notes.length) {
+    document.write(`<ul>${e.notes.map(n => `<li>${n}</li>`).join('')}</ul>`);
+  }
+});
 
-<div class="role-header"><h3><span class="company">MAQ Software</span></h3><span class="date">Jul 2018 – Oct 2020</span></div>
-<div style="font-size:10.5pt; font-weight:600;">BI &amp; Backend Engineer</div>
-<div class="stack">Stack: SSMS · SSAS · SQL · Azure Data Factory · Azure Functions · C# · Power BI · HD Insights</div>
-<ul>
-  <li>Developed enterprise BI solutions — tabular SSAS models, SSIS ETL pipelines, stored procedures, and Power BI dashboards</li>
-  <li>Built Azure Functions for API ingestion and CI/CD pipelines for automated deployment</li>
-</ul>
-
-<h2>Certifications</h2><hr/>
-<ul class="cert-list">
-  <li><strong>AWS Certified Data Engineer – Associate</strong></li>
-  <li>Microsoft Azure DP-200 / DP-201</li>
-  <li>Microsoft Azure AZ-203</li>
-  <li>Microsoft Power BI 70-778</li>
-  <li>Coursera Data Structures &amp; Algorithms Specialisation</li>
-</ul>
-
-<h2>Education</h2><hr/>
-<div class="role-header"><strong>M.Tech — Computer Science &amp; Engineering</strong><span class="date">2016 – 2018</span></div>
-<div>National Institute of Technology Allahabad (MNNIT) · CGPA 8.55 / 10</div>
-<ul>
-  <li>AIR-1518 in GATE 2016 (Computer Science)</li>
-  <li>Co-ordinator, Data Analytics &amp; ML Workshop (2017, 2018)</li>
-</ul>
-
-<div class="role-header"><strong>B.E. — Computer Science &amp; Engineering</strong><span class="date">2012 – 2016</span></div>
-<div>Madhav Institute of Technology &amp; Science, Gwalior (MITS) · CGPA 7.8 / 10</div>
-
-<h2>Achievements</h2><hr/>
-<ul>
-  <li>AIR-1518 in GATE 2016 (Computer Science)</li>
-  <li>Recognised by management for autonomous problem-solving on a high-impact production project at Fanatics</li>
-  <li>Co-ordinator, Data Analytics &amp; ML Workshop at MNNIT (2017, 2018)</li>
-</ul>
+// Achievements
+document.write(`<h2>Achievements</h2><hr/><ul>`);
+d.achievements.forEach(a => {
+  document.write(`<li>${a}</li>`);
+});
+document.write(`</ul>`);
+</script>
 
 </body>
 </html>
