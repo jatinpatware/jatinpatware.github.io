@@ -45,14 +45,14 @@ const resumeData = {
     { category: "Storage & Query", items: ["Apache Iceberg", "Spark SQL", "Trino", "Hive", "Redshift", "S3 Data Lake", "Parquet", "ORC"] },
     { category: "Orchestration", items: ["Apache Airflow", "Stonebranch", "DAG Design", "Dependency Management"] },
     { category: "Data Platform", items: ["Data Mesh", "Data Contracts", "Data Lineage", "Data Quality Frameworks", "Data Cataloguing", "Data Governance", "SLA Management"] },
-    { category: "AI / LLM", items: ["AWS Bedrock", "Bedrock Agents", "LLaMA3", "Glean", "Claude (Anthropic)", "LLM Pipeline Integration", "Agentic Solutions"] },
+    { category: "AI / LLM", items: ["AWS Bedrock", "Bedrock Agents", "LLaMA3", "Glean", "Claude (Anthropic)", "MCP (Model Context Protocol)", "LLM Pipeline Integration", "Agentic Solutions", "Claude Code Skills"] },
     { category: "BI / Legacy", items: ["Power BI", "SSAS Tabular", "SSMS", "SSIS", "C#", "Stored Procedures"] },
-    { category: "Engineering", items: ["CI/CD Pipelines", "Git", "Agile / Scrum", "System Design Reviews", "Performance Tuning", "Spark UI", "DAG Inspection"] }
+    { category: "Engineering", items: ["CI/CD Pipelines", "Git", "Agile / Scrum", "MCP", "Glean Search", "System Design Reviews", "Performance Tuning", "Spark UI", "DAG Inspection"] }
   ],
 
   experience: [
     {
-      company: "Fanatics",
+      company: "FANATICS E-COMMERCE (INDIA) LLP",
       companyDesc: "Global Licensed Sports Merchandise Platform",
       period: "Feb 2022 – Present",
       roles: [
@@ -72,6 +72,7 @@ const resumeData = {
         {
           title: "Data Engineer III",
           period: "Mar 2022 – Feb 2025",
+          company: "FANATICS E-COMMERCE (INDIA) LLP",
           stack: "Apache Spark (Scala) · AWS (S3, EMR, Glue, Lambda) · Kafka Streams · Stonebranch · Trino · Python · SQL",
           bullets: [
             "Designed and delivered Spark batch pipelines on AWS processing petabyte-scale commerce data — significant runtime and compute cost reductions via Spark UI and DAG tuning",
@@ -117,20 +118,19 @@ const resumeData = {
     }
   ],
 
-  // featured: true = teal highlight; secondary: true = compact tag style (component exams)
+  // featured: true = teal highlight; all certs in one flat list
   certifications: [
-    { name: "AWS Certified Data Engineer – Associate",            icon: "☁️",  featured: true, link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/4fdc06a7d5484a28a7366cf8c0d0f1d7" },
-    { name: "Microsoft Certified: Azure Data Engineer Associate", icon: "🔷",  link: "https://www.credly.com/badges/4736cbac-f9d1-4401-a170-0e1fd841889d/public_url" },
-    { name: "Microsoft Certified: Azure Developer Associate",     icon: "🔷",  link: "https://www.credly.com/badges/02f8ecf3-1692-4650-9512-54ddd4216f10/public_url" },
-    { name: "MCSE: Data Management and Analytics (2019)",         icon: "🔷",  link: "https://www.credly.com/badges/4a35bfc4-5c82-4b7d-b51c-8f7cb29204f0/public_url" },
-    { name: "Coursera: Data Structures & Algorithms Specialisation", icon: "📘", link: "https://github.com/jatinpatware/Certifiacates" },
-    // Component exams — rendered as compact tags
-    { name: "DP-200: Implementing an Azure Data Solution",        icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/b599c06b-6087-4c94-98b1-30d37b24eeb9/public_url" },
-    { name: "DP-201: Designing an Azure Data Solution",           icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/9e072037-6fde-4af1-91b2-64d56ae5e08a/public_url" },
-    { name: "Exam 778: Analyzing and Visualizing Data with Power BI", icon: "🔷", secondary: true, link: "https://www.credly.com/badges/8e2e759a-4ef2-4138-98de-765fa505f560/public_url" },
-    { name: "Exam 761: Querying Data with Transact-SQL",          icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/111a5a1f-9e10-491d-80ed-72ac0017428d/public_url" },
-    { name: "Exam 762: Developing SQL Databases",                 icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/8da646ce-10c4-4b06-b65c-856462065887/public_url" },
-    { name: "Exam 768: Developing SQL Data Models",               icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/306d9345-65e0-4253-af61-1b0fb85a779b/public_url" },
+    { name: "AWS Certified Data Engineer – Associate",                icon: "☁️", featured: true, link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/4fdc06a7d5484a28a7366cf8c0d0f1d7" },
+    { name: "Microsoft Certified: Azure Data Engineer Associate",     icon: "🔷", link: "https://www.credly.com/badges/4736cbac-f9d1-4401-a170-0e1fd841889d/public_url" },
+    { name: "Microsoft Certified: Azure Developer Associate",         icon: "🔷", link: "https://www.credly.com/badges/02f8ecf3-1692-4650-9512-54ddd4216f10/public_url" },
+    { name: "MCSE: Data Management and Analytics (2019)",             icon: "🔷", link: "https://www.credly.com/badges/4a35bfc4-5c82-4b7d-b51c-8f7cb29204f0/public_url" },
+    { name: "DP-200: Implementing an Azure Data Solution",            icon: "🔷", link: "https://www.credly.com/badges/b599c06b-6087-4c94-98b1-30d37b24eeb9/public_url" },
+    { name: "DP-201: Designing an Azure Data Solution",               icon: "🔷", link: "https://www.credly.com/badges/9e072037-6fde-4af1-91b2-64d56ae5e08a/public_url" },
+    { name: "Exam 778: Analyzing and Visualizing Data with Power BI", icon: "🔷", link: "https://www.credly.com/badges/8e2e759a-4ef2-4138-98de-765fa505f560/public_url" },
+    { name: "Exam 761: Querying Data with Transact-SQL",              icon: "🔷", link: "https://www.credly.com/badges/111a5a1f-9e10-491d-80ed-72ac0017428d/public_url" },
+    { name: "Exam 762: Developing SQL Databases",                     icon: "🔷", link: "https://www.credly.com/badges/8da646ce-10c4-4b06-b65c-856462065887/public_url" },
+    { name: "Exam 768: Developing SQL Data Models",                   icon: "🔷", link: "https://www.credly.com/badges/306d9345-65e0-4253-af61-1b0fb85a779b/public_url" },
+    { name: "Coursera: Data Structures & Algorithms Specialisation",  icon: "📘", link: "https://github.com/jatinpatware/Certifiacates" },
   ],
 
   // Set github: "https://github.com/jatinpatware/<repo>" when ready to publish
@@ -153,7 +153,14 @@ const resumeData = {
     {
       name: "Pipeline Lineage Tracer",
       desc: "Agentic tool for automated end-to-end data lineage tracing across a multi-layer streaming and batch pipeline — enabling engineers to debug field discrepancies without manual digging.",
-      stack: ["Kafka Streams", "Apache Iceberg", "Python", "Claude AI"],
+      stack: ["Glean", "MCP", "Claude Code Skills", "Agentic AI"],
+      status: "coming-soon",
+      github: null
+    },
+    {
+      name: "Portfolio as a Product",
+      desc: "Open-source engineer portfolio template — single config file drives the site, resume, and README via CI/CD. Deploy to GitHub Pages in minutes. Built to be AI-assistant-agnostic.",
+      stack: ["JavaScript", "GitHub Actions", "GitHub Pages", "CI/CD"],
       status: "coming-soon",
       github: null
     },
