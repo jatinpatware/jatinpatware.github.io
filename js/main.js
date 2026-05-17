@@ -92,16 +92,34 @@ function render() {
     </div>
   `).join('');
 
-  // Certifications
-  document.getElementById('cert-list').innerHTML = d.certifications.map(c => `
-    <div class="cert-item ${c.featured ? 'featured' : ''}">
-      <span class="cert-icon">${c.icon}</span>
-      ${c.link
-        ? `<a href="${c.link}" target="_blank" class="cert-name">${c.name} ↗</a>`
-        : `<span>${c.name}</span>`
-      }
-    </div>
-  `).join('');
+  // Certifications — primary certs as cards, secondary (component exams) as compact tags
+  const primaryCerts = d.certifications.filter(c => !c.secondary);
+  const secondaryCerts = d.certifications.filter(c => c.secondary);
+
+  document.getElementById('cert-list').innerHTML = `
+    ${primaryCerts.map(c => `
+      <div class="cert-item ${c.featured ? 'featured' : ''}">
+        <span class="cert-icon">${c.icon}</span>
+        ${c.link
+          ? `<a href="${c.link}" target="_blank" class="cert-name">${c.name} ↗</a>`
+          : `<span>${c.name}</span>`
+        }
+      </div>
+    `).join('')}
+    ${secondaryCerts.length ? `
+      <div class="cert-exams">
+        <p class="cert-exams-label">Component exams</p>
+        <div class="cert-exam-tags">
+          ${secondaryCerts.map(c =>
+            c.link
+              ? `<a href="${c.link}" target="_blank" class="cert-exam-tag">${c.name} ↗</a>`
+              : `<span class="cert-exam-tag">${c.name}</span>`
+          ).join('')}
+        </div>
+      </div>
+    ` : ''}
+    <a href="${d.credly}" target="_blank" class="cert-credly-link">View all badges on Credly →</a>
+  `;
 
   // Contact
   document.getElementById('contact-links').innerHTML = `

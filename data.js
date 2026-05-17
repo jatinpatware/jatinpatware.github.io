@@ -13,6 +13,7 @@ const resumeData = {
   linkedin: "https://linkedin.com/in/jatin-patware-b9411183",
   github: "https://github.com/jatinpatware",
   portfolio: "https://jatinpatware.github.io",
+  credly: "https://www.credly.com/users/jatin-patware.02075313",
 
   heroBadges: [
     "Apache Spark", "Kafka Streams", "AWS", "Apache Iceberg",
@@ -116,13 +117,20 @@ const resumeData = {
     }
   ],
 
-  // Add link when cert is published publicly; set link: null to hide the badge link
+  // featured: true = teal highlight; secondary: true = compact tag style (component exams)
   certifications: [
-    { name: "AWS Certified Data Engineer – Associate", icon: "☁️", featured: true, link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/4fdc06a7d5484a28a7366cf8c0d0f1d7" },
-    { name: "Microsoft Azure DP-200 / DP-201", icon: "🔷", link: "https://www.credly.com/badges/9e072037-6fde-4af1-91b2-64d56ae5e08a/public_url" },
-    { name: "Microsoft Azure AZ-203", icon: "🔷", link: null },
-    { name: "Microsoft Power BI 70-778", icon: "🔷", link: null },
-    { name: "Coursera Data Structures & Algorithms Specialisation", icon: "📘", link: null }
+    { name: "AWS Certified Data Engineer – Associate",            icon: "☁️",  featured: true, link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/4fdc06a7d5484a28a7366cf8c0d0f1d7" },
+    { name: "Microsoft Certified: Azure Data Engineer Associate", icon: "🔷",  link: "https://www.credly.com/badges/4736cbac-f9d1-4401-a170-0e1fd841889d/public_url" },
+    { name: "Microsoft Certified: Azure Developer Associate",     icon: "🔷",  link: "https://www.credly.com/badges/02f8ecf3-1692-4650-9512-54ddd4216f10/public_url" },
+    { name: "MCSE: Data Management and Analytics (2019)",         icon: "🔷",  link: "https://www.credly.com/badges/4a35bfc4-5c82-4b7d-b51c-8f7cb29204f0/public_url" },
+    { name: "Coursera: Data Structures & Algorithms Specialisation", icon: "📘", link: null },
+    // Component exams — rendered as compact tags
+    { name: "DP-200: Implementing an Azure Data Solution",        icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/b599c06b-6087-4c94-98b1-30d37b24eeb9/public_url" },
+    { name: "DP-201: Designing an Azure Data Solution",           icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/9e072037-6fde-4af1-91b2-64d56ae5e08a/public_url" },
+    { name: "Exam 778: Analyzing and Visualizing Data with Power BI", icon: "🔷", secondary: true, link: "https://www.credly.com/badges/8e2e759a-4ef2-4138-98de-765fa505f560/public_url" },
+    { name: "Exam 761: Querying Data with Transact-SQL",          icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/111a5a1f-9e10-491d-80ed-72ac0017428d/public_url" },
+    { name: "Exam 762: Developing SQL Databases",                 icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/8da646ce-10c4-4b06-b65c-856462065887/public_url" },
+    { name: "Exam 768: Developing SQL Data Models",               icon: "🔷",  secondary: true, link: "https://www.credly.com/badges/306d9345-65e0-4253-af61-1b0fb85a779b/public_url" },
   ],
 
   // Set github: "https://github.com/jatinpatware/<repo>" when ready to publish

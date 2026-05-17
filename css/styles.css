@@ -516,6 +516,54 @@ section:nth-child(even) {
 
 .cert-icon { font-size: 1rem; }
 
+.cert-exams {
+  margin-top: 0.4rem;
+  padding: 0.8rem 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.cert-exams-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.cert-exam-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cert-exam-tag {
+  font-size: 0.78rem;
+  color: #8899aa;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+a.cert-exam-tag:hover {
+  color: var(--teal);
+  border-color: var(--teal);
+}
+
+.cert-credly-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--teal);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.cert-credly-link:hover { opacity: 1; }
+
 /* ===== CONTACT ===== */
 #contact {
   text-align: center;
