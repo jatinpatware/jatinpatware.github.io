@@ -17,7 +17,7 @@ const resumeData = {
 
   heroBadges: [
     "Apache Spark", "Kafka Streams", "AWS", "Apache Iceberg",
-    "Data Mesh", "LLM Integration"
+    "Data Mesh", "LLM Integration", "Scala", "Python", "Airflow", "Snowflake"
   ],
 
   summary: `Data Engineer with 8+ years of experience known for strong system design instincts
