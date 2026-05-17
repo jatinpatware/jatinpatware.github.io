@@ -158,11 +158,11 @@ const resumeData = {
       github: null
     },
     {
-      name: "Portfolio as a Product",
-      desc: "Open-source engineer portfolio template — single config file drives the site, resume, and README via CI/CD. Deploy to GitHub Pages in minutes. Built to be AI-assistant-agnostic.",
-      stack: ["JavaScript", "GitHub Actions", "GitHub Pages", "CI/CD"],
-      status: "coming-soon",
-      github: null
+      name: "LaunchFolio",
+      desc: "Open-source tool that turns a resume upload into a deployable developer portfolio — parses your resume, generates a data config, resume formats, and a GitHub Pages-ready site with CI/CD. One upload, fully deployed.",
+      stack: ["Python", "Flask", "JavaScript", "GitHub Actions"],
+      status: "live",
+      github: "https://github.com/jatinpatware/launchfolio"
     },
     // ── Academic / Open Source ───────────────────────────────────
     {
