@@ -100,4 +100,5 @@ lines.push(`*Generated from [data.js](data.js) — single source of truth for po
 
 const readme = lines.join('\n');
 fs.writeFileSync(path.join(__dirname, '..', 'README.md'), readme);
-console.log('README.md generated successfully.');
+fs.writeFileSync(path.join(__dirname, '..', 'resume', 'README.md'), readme);
+console.log('README.md and resume/README.md generated successfully.');
