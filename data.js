@@ -135,6 +135,7 @@ const resumeData = {
 
   // Set github: "https://github.com/jatinpatware/<repo>" when ready to publish
   projects: [
+    // ── Professional (coming soon) ───────────────────────────────
     {
       name: "Data Quality Framework",
       desc: "Scala/Spark DQ framework with YAML-based rule configuration — covering validation, SLA enforcement, and alerting across batch pipelines.",
@@ -155,6 +156,31 @@ const resumeData = {
       stack: ["Kafka Streams", "Apache Iceberg", "Python", "Claude AI"],
       status: "coming-soon",
       github: null
+    },
+    // ── Academic / Open Source ───────────────────────────────────
+    {
+      name: "Algorithm Courses",
+      desc: "C++ implementations of core data structures and algorithms — sorting, searching, graphs, dynamic programming, and tree traversals. Companion code for the Coursera DSA Specialisation.",
+      stack: ["C++", "Data Structures", "Algorithms"],
+      status: "live",
+      academic: true,
+      github: "https://github.com/jatinpatware/Algorithm-Courses"
+    },
+    {
+      name: "Data Science",
+      desc: "SQL-based data science experiments covering exploratory analysis, aggregations, window functions, and analytical query patterns.",
+      stack: ["SQL", "Data Analysis"],
+      status: "live",
+      academic: true,
+      github: "https://github.com/jatinpatware/Data-Science"
+    },
+    {
+      name: "Data Warehousing & Mining",
+      desc: "Academic implementations of data warehousing concepts and data mining algorithms — dimensional modelling, ETL patterns, and classification techniques.",
+      stack: ["Data Warehousing", "Data Mining", "ETL"],
+      status: "live",
+      academic: true,
+      github: "https://github.com/jatinpatware/Dataware_Housing_-_Mining"
     }
   ],
 

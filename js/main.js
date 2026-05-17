@@ -62,8 +62,8 @@ function render() {
     </div>
   `).join('');
 
-  // Projects
-  document.getElementById('projects-grid').innerHTML = d.projects.map(p => `
+  // Projects — professional group, then academic/open-source group
+  const renderCard = p => `
     <div class="project-card">
       <div class="project-header">
         <h3 class="project-name">${p.name}</h3>
@@ -77,7 +77,15 @@ function render() {
         ${p.stack.map(s => `<span>${s}</span>`).join('')}
       </div>
     </div>
-  `).join('');
+  `;
+
+  const professional = d.projects.filter(p => !p.academic);
+  const academic = d.projects.filter(p => p.academic);
+
+  document.getElementById('projects-grid').innerHTML =
+    professional.map(renderCard).join('') +
+    (academic.length ? `<div class="projects-divider"><span>Academic &amp; Open Source</span></div>` : '') +
+    academic.map(renderCard).join('');
 
   // Education
   document.getElementById('edu-list').innerHTML = d.education.map(e => `
