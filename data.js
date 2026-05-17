@@ -116,34 +116,34 @@ const resumeData = {
     }
   ],
 
-  // Add github link when cert is published publicly
+  // Add link when cert is published publicly; set link: null to hide the badge link
   certifications: [
     { name: "AWS Certified Data Engineer – Associate", icon: "☁️", featured: true, link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/4fdc06a7d5484a28a7366cf8c0d0f1d7" },
-    { name: "Microsoft Azure DP-200 / DP-201", icon: "🔷" },
-    { name: "Microsoft Azure AZ-203", icon: "🔷" },
-    { name: "Microsoft Power BI 70-778", icon: "🔷" },
-    { name: "Coursera Data Structures & Algorithms Specialisation", icon: "📘" }
+    { name: "Microsoft Azure DP-200 / DP-201", icon: "🔷", link: "https://www.credly.com/badges/9e072037-6fde-4af1-91b2-64d56ae5e08a/public_url" },
+    { name: "Microsoft Azure AZ-203", icon: "🔷", link: null },
+    { name: "Microsoft Power BI 70-778", icon: "🔷", link: null },
+    { name: "Coursera Data Structures & Algorithms Specialisation", icon: "📘", link: null }
   ],
 
   // Set github: "https://github.com/jatinpatware/<repo>" when ready to publish
   projects: [
     {
       name: "Data Quality Framework",
-      desc: "In-house Scala/Spark DQ framework with YAML-based rule configuration — adopted across critical production pipelines for validation, SLA enforcement, and alerting.",
+      desc: "Scala/Spark DQ framework with YAML-based rule configuration — covering validation, SLA enforcement, and alerting across batch pipelines.",
       stack: ["Scala", "Apache Spark", "YAML", "AWS"],
       status: "coming-soon",
       github: null
     },
     {
       name: "LLM Executive Insight Engine",
-      desc: "LLM-powered insight engine — LLaMA3 on EC2, invoked via AWS Lambda, generating natural language insights from enriched S3 commerce data. Built during an internal hackathon.",
+      desc: "LLM-powered insight engine — LLaMA3 on EC2, invoked via AWS Lambda, generating natural language insights from structured pipeline data.",
       stack: ["LLaMA3", "AWS Lambda", "EC2", "S3", "Python"],
       status: "coming-soon",
       github: null
     },
     {
-      name: "Order Data Lineage Tracer",
-      desc: "Agentic solution for automated end-to-end order data lineage tracing across Kafka Streams, Iceberg, and downstream BI layers in a complex multi-layer pipeline.",
+      name: "Pipeline Lineage Tracer",
+      desc: "Agentic tool for automated end-to-end data lineage tracing across a multi-layer streaming and batch pipeline — enabling engineers to debug field discrepancies without manual digging.",
       stack: ["Kafka Streams", "Apache Iceberg", "Python", "Claude AI"],
       status: "coming-soon",
       github: null

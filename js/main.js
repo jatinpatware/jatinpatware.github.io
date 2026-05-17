@@ -15,10 +15,8 @@ function render() {
     .map(b => `<span class="badge">${b}</span>`).join('');
 
   document.getElementById('hero-links').innerHTML = `
-    <a href="${d.linkedin}" target="_blank" class="btn-primary">LinkedIn</a>
-    <a href="${d.github}" target="_blank" class="btn-secondary">GitHub</a>
+    <a href="#about" class="btn-primary">See My Work</a>
     <a href="resume/Jatin_Patware_Senior_Data_Engineer.pdf" target="_blank" class="btn-secondary">Download Resume</a>
-    <a href="mailto:${d.email}" class="btn-secondary">Email</a>
   `;
 
   // About
