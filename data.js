@@ -159,7 +159,7 @@ const resumeData = {
     },
     {
       name: "LaunchFolio",
-      desc: "Open-source tool that turns a resume upload into a deployable developer portfolio — parses your resume, generates a data config, resume formats, and a GitHub Pages-ready site with CI/CD. One upload, fully deployed.",
+      desc: "Your personal professional presence repo — upload a resume PDF, paste raw content, or fill in details to generate a portfolio site, resume, and README all driven by one config file. Edit once, everything stays in sync via CI/CD.",
       stack: ["Python", "Flask", "JavaScript", "GitHub Actions"],
       status: "live",
       github: "https://github.com/jatinpatware/launchfolio"
