@@ -20,7 +20,7 @@ Data Engineer with 8+ years of experience known for strong system design instinc
 | **Query Engines** | Spark SQL · Trino · Hive |
 | **Orchestration** | Apache Airflow · Stonebranch |
 | **Data Platform** | Data Mesh · Data Contracts · Data Lineage · Data Quality Frameworks · Data Cataloguing · Apache Iceberg |
-| **AI / LLM** | AWS Bedrock · Bedrock Agents · Glean · Claude (Anthropic) · LLM Pipeline Integration |
+| **AI / LLM** | AWS Bedrock · Bedrock Agents · LLaMA3 · Glean · Claude (Anthropic) · LLM Pipeline Integration |
 | **BI / Legacy** | Power BI · SSAS (Tabular) · SSMS · SSIS · C# |
 | **Other** | CI/CD Pipelines · Git · Agile / Scrum |
 
@@ -35,6 +35,7 @@ Data Engineer with 8+ years of experience known for strong system design instinc
 
 - Own design and reliability of real-time order event processing on Kafka Streams — canonical data models and transformation contracts supporting **30–40K messages/min at peak** across multiple downstream consumers
 - Maintain and evolve the canonical Iceberg layer at **petabyte scale**, consumed by downstream BI and analytics systems
+- Built an **agentic solution for automated order data lineage tracing** across a complex multi-layer pipeline — enabling engineers to debug field discrepancies end-to-end across Kafka Streams, Iceberg, and downstream BI layers
 - Integrated LLM-powered capabilities into engineering workflows using AWS Bedrock Agents, Glean, and Claude — automated insight surfacing and reduced engineering overhead
 - Mentored junior and mid-level engineers across system design and pipeline best practices; go-to design reviewer across cross-functional squads
 - Drove data mesh adoption — data contracts, lineage, and cataloguing to improve trust and discoverability at platform scale
@@ -47,8 +48,9 @@ Data Engineer with 8+ years of experience known for strong system design instinc
 
 - Designed and delivered Spark batch pipelines on AWS processing petabyte-scale commerce data — led performance tuning using Spark UI and DAG inspection, achieving significant runtime and compute cost reductions
 - Built backend data pipelines powering executive dashboards — enabling **200+ ecommerce metrics** consumed by senior leadership and business teams
+- Designed and built an **in-house data quality framework in Scala/Spark with YAML-based rule configuration** — adopted across critical pipelines to standardise validation, SLA enforcement, and alerting
+- Built an **LLM-powered executive insight engine** during an internal hackathon — LLaMA3 hosted on EC2, invoked via AWS Lambda, processing enriched S3 pipeline data to generate natural language insights from structured commerce data
 - Built ETL pipelines in Scala/Spark powering BI reporting layers — translating raw commerce events into clean, reliable analytical datasets
-- Designed a data quality framework adopted across critical pipelines — validation rules, SLA contracts, and alerting to prevent downstream incidents
 - Owned orchestration across **100+ workflows** on Stonebranch — rationalised dependency graphs and standardised failure recovery approaches
 
 ---
@@ -104,4 +106,4 @@ Madhav Institute of Technology & Science, Gwalior (MITS) &nbsp;|&nbsp; 2012 – 
 
 ---
 
-*📄 [Download PDF Resume](./Jatin_Patware_Senior_Data_Engineer.pdf)*
+*📄 [Download PDF Resume](./Jatin_Patware_Senior_Data_Engineer.pdf) &nbsp;|&nbsp; 🌐 [Portfolio](https://jatinpatware.github.io)*
